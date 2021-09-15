@@ -1,7 +1,7 @@
 package com.example.forum.repository
 
-import com.example.forum.model.User
+import com.example.forum.model.Users
 import org.springframework.data.jpa.repository.JpaRepository
 
-interface UserRepository: JpaRepository<User, Long> {
+interface UsersRepository: JpaRepository<Users, Long> {
 }

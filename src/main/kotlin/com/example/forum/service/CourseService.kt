@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service
 class CourseService(private val repostory: CourseRepository) {
 
     fun searchId(id: Long): Course {
-        return repostory.getById(id)
+        return repostory.getOne(id)
     }
 }

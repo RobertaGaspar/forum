@@ -6,11 +6,10 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-data class User(
+data class Users(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
-
     val name: String,
-    val email: String,
+    val email: String
 )

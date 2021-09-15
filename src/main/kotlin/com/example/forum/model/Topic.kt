@@ -8,20 +8,15 @@ data class Topic(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
-
     var title: String,
     var message: String,
     val creationDate: LocalDateTime = LocalDateTime.now(),
-
     @ManyToOne
     val course: Course,
-
     @ManyToOne
-    val author: User,
-
+    val author: Users,
     @Enumerated(value = EnumType.STRING)
     val status: StatusTopic = StatusTopic.NO_RESPONDED,
-
     @OneToMany(mappedBy = "topic")
-    val answer: List<Answer> = ArrayList(),
+    val answer: List<Answer> = ArrayList()
 )
